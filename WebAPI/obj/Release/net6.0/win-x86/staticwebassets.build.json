@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "t0POtJF0clm8cJxnJXGunlH+4ZyM8z/e3GKNrdxz4Ow=",
+  "Source": "MyAppAPI",
+  "BasePath": "_content/MyAppAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

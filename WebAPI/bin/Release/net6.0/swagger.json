@@ -1,0 +1,1059 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MyAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Booking": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Booking"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Booking"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Booking/{id}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BookingSlots": {
+      "get": {
+        "tags": [
+          "BookingSlots"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BookingSlots"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BookingSlots"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BookingSlots"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BookingSlots"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BookingSlots/{id}": {
+      "get": {
+        "tags": [
+          "BookingSlots"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/{id}": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/City": {
+      "get": {
+        "tags": [
+          "City"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "City"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/City"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "City"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/City"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/City/{id}": {
+      "get": {
+        "tags": [
+          "City"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Payment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Payment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Payment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment/{id}": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Photos": {
+      "get": {
+        "tags": [
+          "Photos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Photos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Photos"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Photos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Photos"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Photos/{id}": {
+      "get": {
+        "tags": [
+          "Photos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SlotDetails": {
+      "get": {
+        "tags": [
+          "SlotDetails"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SlotDetails"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SlotDetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SlotDetails"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SlotDetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SlotDetails/{id}": {
+      "get": {
+        "tags": [
+          "SlotDetails"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Users"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Users"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Venue": {
+      "get": {
+        "tags": [
+          "Venue"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Venue"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Venue"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Venue"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Venue"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Venue/{id}": {
+      "get": {
+        "tags": [
+          "Venue"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Booking": {
+      "required": [
+        "amount",
+        "bookingDate",
+        "slotDate",
+        "userId"
+      ],
+      "type": "object",
+      "properties": {
+        "bookingId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "slotDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "users": {
+          "$ref": "#/definitions/Users"
+        },
+        "userId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bookingStatus": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "bookingDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "BookingSlots": {
+      "required": [
+        "bookingId",
+        "paymentDate",
+        "slotId"
+      ],
+      "type": "object",
+      "properties": {
+        "bookingSlotId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "booking": {
+          "$ref": "#/definitions/Booking"
+        },
+        "bookingId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "slotDetails": {
+          "$ref": "#/definitions/SlotDetails"
+        },
+        "slotId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Category": {
+      "required": [
+        "amount",
+        "discount",
+        "venueId"
+      ],
+      "type": "object",
+      "properties": {
+        "categoryId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "code": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "venue": {
+          "$ref": "#/definitions/Venue"
+        },
+        "venueId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "prority": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "City": {
+      "type": "object",
+      "properties": {
+        "cityId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "code": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "Payment": {
+      "required": [
+        "amount",
+        "bookingSlotId",
+        "userId"
+      ],
+      "type": "object",
+      "properties": {
+        "paymentId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bookingSlots": {
+          "$ref": "#/definitions/BookingSlots"
+        },
+        "bookingSlotId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "users": {
+          "$ref": "#/definitions/Users"
+        },
+        "userId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "paymentDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "paymentStatus": {
+          "type": "string"
+        },
+        "transactionId": {
+          "type": "string"
+        }
+      }
+    },
+    "Photos": {
+      "required": [
+        "venueId"
+      ],
+      "type": "object",
+      "properties": {
+        "photoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "venue": {
+          "$ref": "#/definitions/Venue"
+        },
+        "venueId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        }
+      }
+    },
+    "SlotDetails": {
+      "required": [
+        "categoryId",
+        "isEnabled",
+        "slotDate",
+        "slotNumber"
+      ],
+      "type": "object",
+      "properties": {
+        "slotId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "slotNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "$ref": "#/definitions/Category"
+        },
+        "categoryId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "slotDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "slotStatus": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "slotPriority": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "isEnabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Users": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "email": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "firstName": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "lastName": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "mobile": {
+          "maxLength": 20,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "Venue": {
+      "required": [
+        "cityId",
+        "isActive"
+      ],
+      "type": "object",
+      "properties": {
+        "venueId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "code": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "latLong": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "contactNumber": {
+          "maxLength": 20,
+          "minLength": 0,
+          "type": "string"
+        },
+        "address": {
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "city": {
+          "$ref": "#/definitions/City"
+        },
+        "cityId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
