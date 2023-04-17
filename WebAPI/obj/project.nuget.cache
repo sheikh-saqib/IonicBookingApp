@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1xkW9BFptrDqAIF0Q3bhYxjh+0Kn3VC022JncElGebShoHHTQvQv6hxVmCdO6cjrRpYlA/b8e8nuTfN4X9Tkog==",
+  "dgSpecHash": "EjPECna2zsibgg/g1Mz6r8VesOtBEyFD12M24Nj8xlFMvbbaoMrtfbfDis1jr75E1AXZyW4EYEKGRx1rd6tIYA==",
   "success": true,
-  "projectFilePath": "C:\\MyAPP\\API\\MyAppAPI.csproj",
+  "projectFilePath": "C:\\Development\\SportsOnGo\\Sports-On-Go-API\\MyAppAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SheikhSaqibFayaz\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\SheikhSaqibFayaz\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

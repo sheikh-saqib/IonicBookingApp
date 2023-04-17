@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MyAppAPI.Interface;
 using MyAppAPI.Models;
+using System.Linq.Expressions;
 
 namespace MyAppAPI.Controllers
 {
@@ -53,6 +54,25 @@ namespace MyAppAPI.Controllers
         {
             return Ok(await _repo.Create(PaymentUpdateData));
 
+        }
+        [HttpGet]
+        [Route("/api/[controller]/[action]")]
+        public async Task<IActionResult> GetByUserId()
+        {
+            var userId = HttpContext.User.Claims.First(c => c.Type == "UserId").Value;
+
+            Expression<Func<Payment, bool>> filter = null;
+            filter = a => a.UserId == Convert.ToInt32(userId);
+            var myBookings = await _repo.FindAllAsync<Payment>(filter, null);
+            foreach (var item in myBookings)
+            {
+                var bookingDetails = await _repo.GetById<Booking>(item.BookingId);
+                item.BookingDetails = bookingDetails;
+                var venueDetails = await _repo.GetById<Venue>(item.VenueId);
+                item.VenueDetails = venueDetails;
+
+            }
+            return Ok(myBookings);
         }
     }
 }

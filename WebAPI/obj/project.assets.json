@@ -5007,11 +5007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyAPP\\API\\MyAppAPI.csproj",
+      "projectUniqueName": "C:\\Development\\SportsOnGo\\Sports-On-Go-API\\MyAppAPI.csproj",
       "projectName": "MyAppAPI",
-      "projectPath": "C:\\MyAPP\\API\\MyAppAPI.csproj",
+      "projectPath": "C:\\Development\\SportsOnGo\\Sports-On-Go-API\\MyAppAPI.csproj",
       "packagesPath": "C:\\Users\\SheikhSaqibFayaz\\.nuget\\packages\\",
-      "outputPath": "C:\\MyAPP\\API\\obj\\",
+      "outputPath": "C:\\Development\\SportsOnGo\\Sports-On-Go-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SheikhSaqibFayaz\\AppData\\Roaming\\NuGet\\NuGet.Config",

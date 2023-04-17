@@ -9,6 +9,8 @@
         //public DateTime BookingDate { get; set; }
         public decimal Amount { get; set; }
         public List<int> SlotIds { get; set; }
+        public int VenueId { get; set; }
+
     }
     public class AcquirerData
     {

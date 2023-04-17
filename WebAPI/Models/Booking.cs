@@ -17,9 +17,11 @@ namespace MyAppAPI.Models
         public string BookingStatus { get; set; } = null!;
         [Required]
         public DateTime BookingDate { get; set; }
-        [Required]
+        public DateTime BookingUpdateDate { get; set; }
         public decimal Amount { get; set; }
         public string RazorPayPaymentId { get; set; } = null!;
         public string RazorPayOrderId { get; set; } = null!;
+        public List<BookingSlots> BookingSlots { get; set; } 
+
     }
 }

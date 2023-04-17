@@ -4,6 +4,7 @@ using MyAppAPI.DTOs;
 using MyAppAPI.Interface;
 using MyAppAPI.Models;
 using MyAppAPI.Services;
+using System.Linq.Expressions;
 
 namespace MyAppAPI.Controllers
 {
@@ -42,6 +43,8 @@ namespace MyAppAPI.Controllers
                 existingBookingDetails.BookingStatus = BookingUpdateData.BookingStatus;
                 existingBookingDetails.BookingDate = BookingUpdateData.BookingDate;
                 existingBookingDetails.Amount = BookingUpdateData.Amount;
+                existingBookingDetails.BookingUpdateDate = BookingUpdateData.BookingUpdateDate;
+
                 return Ok(await _repo.Update(existingBookingDetails));
             }
             else
@@ -53,6 +56,14 @@ namespace MyAppAPI.Controllers
         public async Task<IActionResult> Post([FromBody] Booking bookingPayload)
         {
             return Ok(await _repo.Create(bookingPayload));
+        }
+
+        [HttpPost]
+        [Route("/api/[controller]/[action]")]
+        public async Task<IActionResult> CancelBooking([FromBody] int bookingId)
+        {
+            var abc = _bookingService.CancelBooking(bookingId);
+            return Ok(abc);
         }
 
     }
