@@ -1,0 +1,19 @@
+<ion-item [routerLink]="['/', 'places', 'tabs', 'operations','edit', operations.id]">
+  <ion-thumbnail slot="start">
+    <ion-img [src]="operations.imageUrl"></ion-img>
+  </ion-thumbnail>
+  <ion-label>
+    <h1>{{ operations.title }}</h1>
+    <ion-grid class="operations-footer">
+      <ion-icon name="calendar" color="primary"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{
+        getDummyDate() | date
+        }}</ion-text>
+      <span class="space-left">to</span>
+      <ion-icon name="calendar" class="space-left" color="primary"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{
+        getDummyDate() | date
+        }}</ion-text>
+    </ion-grid>
+  </ion-label>
+</ion-item>

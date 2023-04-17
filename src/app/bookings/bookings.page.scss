@@ -1,0 +1,46 @@
+.dot_details {
+  margin: 24px 0px;
+  font-size: 50px;
+  line-height: 20px;
+  color: #fff;
+  margin-top: -13px;
+  font-family: "sans-serif";
+}
+ion-segment-button {
+  --indicator-color: #fcac03;
+}
+
+/* Material Design styles */
+ion-segment-button.md {
+  --color: #000;
+  --color-checked: #fcad03;
+  --indicator-height: 4px;
+}
+
+/* iOS styles */
+ion-segment-button.ios {
+  --color: #fcad03;
+  --color-checked: #fff;
+  --border-radius: #fcad03;
+}
+
+.dateCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.mainCol {
+  border-radius: 12px;
+  border-right: #fff;
+  border-style: dotted;
+  border-width: 2px;
+  background-color: #1979ff;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-style: none;
+}
+.seg {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}

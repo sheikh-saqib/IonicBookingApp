@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places/tabs/discover"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Bookings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment value="active" (ionChange)="onSegmentChanged($event)" class="seg">
+    <ion-segment-button value="active">
+      <ion-label>Active Bookings</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="past">
+      <ion-label>Past Bookings</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-grid *ngIf="selectedSegment=='active'">
+    <ion-list *ngFor="let booking of myActiveBookings">
+      <ion-row>
+        <ion-col size="9" offset-md="3" class="mainCol">
+          <div style="font-size: 18px; color: #fff;padding-bottom: 10px; ">
+            <ion-icon name="football-outline" size="large" style="color: #fcac03;"></ion-icon>{{booking.VenueName}}
+            <span class="dot_details">.</span> {{booking.VenueAddress}}
+            <span><ion-badge color="danger">Cancel</ion-badge></span>
+          </div>
+          <div>
+            <div style="font-size: 18px; color: #bbbab8;padding-bottom: 4px;">Time</div>
+            <div style="font-size: 25px; color:  #fff;font-weight: bold; padding-bottom: 10px;">10:00 AM - 11:15 PM
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div>
+              <div style="font-size: 18px; color:  #bbbab8; padding-bottom: 4px;">Bookind ID</div>
+              <div style="font-size: 25px; color:  #fff;font-weight: bold;">BID{{booking.BookingId}}</div>
+            </div>
+            <div>
+              <div style="font-size: 18px; color:  #bbbab8;padding-bottom: 4px;">Amount</div>
+              <div style="font-size: 25px;color:  #fff; font-weight: bold;">{{booking.Amount| currency:'INR'}}</div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="3" offset-md="3" style="border-radius: 12px; background-color: red;">
+          <div class="dateCol">
+            <div style="font-weight: bold; font-size: 25px; color:#fcad03;">
+              {{booking.BookingSlotDateTime| date: 'dd'}}
+            </div>
+            <div style="font-weight: bold; font-size: 30px; color:#1979ff;">
+              {{booking.BookingSlotDateTime| date: 'MMM'}}
+            </div>
+            <div style="font-weight: bold; font-size: 25px; color:#fcad03;">
+              {{booking.BookingSlotDateTime| date: 'yyyy'}}
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-grid>
+  <ion-grid *ngIf="selectedSegment=='past'">
+    <ion-list *ngFor="let booking of myPastBookings">
+      <ion-row>
+        <ion-col size="9" offset-md="3" class="mainCol">
+          <div style="font-size: 18px; color: #fff;padding-bottom: 10px; ">
+            <ion-icon name="football-outline" size="large" style="color: #fcac03;"></ion-icon>{{booking.VenueName}}
+            <span class="dot_details">.</span> {{booking.VenueAddress}}
+            <span><ion-badge color="danger">Cancel</ion-badge></span>
+          </div>
+          <div>
+            <div style="font-size: 18px; color: #bbbab8;padding-bottom: 4px;">Time</div>
+            <div style="font-size: 25px; color:  #fff;font-weight: bold; padding-bottom: 10px;">10:00 AM - 11:15 PM
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div>
+              <div style="font-size: 18px; color:  #bbbab8; padding-bottom: 4px;">Bookind ID</div>
+              <div style="font-size: 25px; color:  #fff;font-weight: bold;">BID{{booking.BookingId}}</div>
+            </div>
+            <div>
+              <div style="font-size: 18px; color:  #bbbab8;padding-bottom: 4px;">Amount</div>
+              <div style="font-size: 25px;color:  #fff; font-weight: bold;">{{booking.Amount| currency:'INR'}}</div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="3" offset-md="3" style="border-radius: 12px; background-color: red;">
+          <div class="dateCol">
+            <div style="font-weight: bold; font-size: 25px; color:#fcad03;">
+              {{booking.BookingSlotDateTime| date: 'dd'}}
+            </div>
+            <div style="font-weight: bold; font-size: 30px; color:#1979ff;">
+              {{booking.BookingSlotDateTime| date: 'MMM'}}
+            </div>
+            <div style="font-weight: bold; font-size: 25px; color:#fcad03;">
+              {{booking.BookingSlotDateTime| date: 'yyyy'}}
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-grid>
+
+</ion-content>

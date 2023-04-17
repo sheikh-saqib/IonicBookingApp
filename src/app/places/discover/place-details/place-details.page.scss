@@ -1,0 +1,31 @@
+ion-chip {
+  pointer-events: none;
+}
+.details_line {
+  font-weight: bold;
+  font-size: 20px;
+}
+.dot_details {
+  margin: 0px 10px;
+  font-size: 50px;
+  line-height: 20px;
+  color: #6e6e6e;
+  margin-top: -13px;
+  font-family: "sans-serif";
+}
+.h_line {
+  min-height: 5px !important;
+  margin: 10px 0px 10px !important;
+}
+
+.toolbar-content {
+  flex: 1 1 0%;
+  order: 4;
+  min-width: 0px;
+  display: contents;
+  background: #ffa200 !important;
+  border: #ffa200 !important;
+}
+.toolbar-background {
+  background: #ffa200 !important;
+}

@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places/tabs/discover"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button (click)="onNavigate()"><ion-icon name="navigate" size="large">
+    </ion-icon>Navigate</ion-button>
+  <ion-button (click)="openSocial()"><ion-icon name="share"></ion-icon>
+    Share
+  </ion-button>
+
+  <ion-slides>
+    <ion-slide>
+      <ion-img [src]="this.place.imageUrl"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img [src]="this.place.imageUrl3"></ion-img>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-img [src]="this.place.imageUrl"></ion-img>
+    </ion-slide>
+  </ion-slides>
+  <!-- <ion-grid><ion-row *ngFor="let week of weeks"><ion-col *ngFor="let day of week">{{day}}<ion-button
+          *ngFor="let slot of slots" (click)="bookSlot(day, slot)">{{slot}}</ion-button></ion-col></ion-row></ion-grid> -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <p class="details_line">{{ place.title }}</p>
+      </div>
+      <div style="display: flex;">
+        <div>
+          R: 4000
+        </div>
+        <div class="dot_details">.</div>
+        <div>
+          8:00 AM - 6:00 AM
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-item-divider class="h_line">
+  </ion-item-divider>
+  <div class="row">
+    <div class="col-md-12">
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div>
+          <p>Location</p>
+        </div>
+        <div>
+          <ion-button (click)="onNavigate()"><ion-icon name="navigate">
+            </ion-icon>Navigate</ion-button>
+          <p>Navigation</p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: row;">
+        <div>
+          <p>*</p>
+        </div>
+        <div>
+          <p>Paragraph / Some more content </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <ion-item-divider class="h_line">
+  </ion-item-divider>
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <p>Available Sports </p>
+      </div>
+      <div>
+        <ion-chip>Cricket Nets</ion-chip>
+      </div>
+    </div>
+  </div>
+  <ion-item-divider class="h_line">
+  </ion-item-divider>
+  <ion-accordion-group>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Venue Rules</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card-subtitle>Rules</ion-card-subtitle>
+        <ion-list>
+          <ul>
+            <li>{{this.place.title}} is not responsible for any direct or indirect, for any loss, damage or injury to
+              property
+              or
+              person in connection to the provided services by the facility</li>
+            <li>No Smoking</li>
+            <li>No Drinking</li>
+            <li>Maximum of 14 Players allowed at a time</li>
+          </ul>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <ion-item-divider class="h_line">
+  </ion-item-divider>
+  <ion-accordion-group>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Facilities</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card-subtitle>Rules</ion-card-subtitle>
+        <ion-list>
+          <ul>
+            <li>No Smoking</li>
+            <li>No Drinking</li>
+            <li>Maximum of 14 Players allowed at a time</li>
+          </ul>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <ion-item-divider class="h_line">
+  </ion-item-divider>
+  <div class="row">
+    <div class="col-md-12">
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-footer (click)="onBookPlace()">
+  <ion-toolbar>
+    <ion-header>Enquire<ion-icon name="arrow-forward" size="large"></ion-icon></ion-header>
+  </ion-toolbar>
+</ion-footer>

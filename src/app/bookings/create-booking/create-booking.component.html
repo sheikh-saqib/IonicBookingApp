@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ selectedPlace.title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center" padding>
+  <ion-list>
+    <ion-accordion-group value="datePicker">
+      <ion-accordion value="datePicker">
+        <ion-item slot="header">
+          <ion-label>{{startDate | date: 'dd MMMM yyyy'}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-row>
+            <ion-col size-sm="3" offset-sm="3">
+              <ion-item>
+                <ion-datetime display-format="DD MMM YYYY" picker-format="DD MMM YYYY" required presentation="date"
+                  [(ngModel)]="selectedDate" (ngModelChange)="onDatePick()"></ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+  <ion-grid *ngIf="!showCalender">
+    <ion-row *ngFor="let slot of this.slotDetails">
+      <ion-item class="custom_card" *ngIf="slot.SlotStatus != 'Booked'">
+        <ion-item style="font-weight: bold;border-style:none !important">{{slot.SlotTime}}</ion-item>
+        <ion-item>{{slot.Category.amount | currency:'INR'}}</ion-item>
+        <ion-icon style="color:green" name="add-circle" size="large" *ngIf="!slot.showDeleteSlot"
+          (click)="onAddSlot(slot)"></ion-icon>
+        <ion-icon style="color:red" name="close-circle" size="large" *ngIf="slot.showDeleteSlot"
+          (click)="onDeleteSlot(slot)"></ion-icon>
+      </ion-item>
+      <ion-item class="custom_card" *ngIf="slot.SlotStatus == 'Booked'">
+        <ion-item style="font-weight: bold;border-style:none !important">{{slot.SlotTime}}</ion-item>
+        <ion-item>{{slot.Category.amount | currency:'INR'}}</ion-item>
+        <i class="fa fa-check-circle fa-xl" aria-hidden="true" style="font-size: 29px;
+    color: #0009ff;
+    padding-left: 6px;"></i>
+      </ion-item>
+    </ion-row>
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="sumry">Booking Summary</div>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <div class="custom_card2">
+          <div>Category </div>
+          <div>{{slotDetails[0].Category.name}}</div>
+        </div>
+        <div class="custom_card2">
+          <div>Slot Price </div>
+          <div>{{this.totalSlotPrice | currency:'INR'}}</div>
+        </div>
+        <div class="custom_card2">
+          <div>Covenience Fee </div>
+          <div>{{this.totalConveniencePrice| currency:'INR'}}</div>
+        </div>
+        <div class="custom_card2">
+          <div>Additional Discounts</div>
+          <div>{{this.totalDiscountPrice| currency:'INR'}}</div>
+        </div>
+      </div>
+      <hr>
+      <div class="custom_card2">
+        <div style="font-weight: bold">Payable Amount </div>
+        <div style="font-weight: bold">{{this.payableAmount| currency:'INR'}}</div>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
+<ion-footer *ngIf="!showCalender">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="9">
+        <div class="iphone-slider">
+          <input [disabled]="this.payableAmount==0" id="rzp-button1" type="range" [(ngModel)]="slideValue" value="0"
+            min="0" max="100" (change)="redirectToPayment()">
+          <span>Slide to Book</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

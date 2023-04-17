@@ -1,0 +1,169 @@
+:host {
+  --background: var(
+    --ion-toolbar-background,
+    var(--ion-color-step-50, #f7f7f7)
+  );
+  --color: var(--ion-toolbar-color, var(--ion-text-color, #000));
+  --border-color: var(
+    --ion-toolbar-border-color,
+    var(--ion-border-color, var(--ion-color-step-150, rgba(0, 0, 0, 0.2)))
+  );
+  /* --padding-top: 3px; */
+  /* --padding-bottom: 3px; */
+  /* --padding-start: 4px; */
+  /* --padding-end: 4px; */
+  --min-height: 1px;
+}
+
+.slide-container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+ion-button {
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+iphone-slider {
+  width: 280px;
+  height: 46px;
+
+  /* set the wrapper as the anchor element for positioning */
+  position: relative;
+}
+
+.iphone-slider input {
+  -webkit-appearance: none;
+  width: 135%;
+  background: #007e33;
+  padding: 3px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #007e33),
+    color-stop(1, #007e33)
+  );
+}
+
+.iphone-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  /* position the button on top of everything */
+  z-index: 100;
+  position: relative;
+
+  width: 68px;
+  height: 44px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+  /* arrow and button gradient */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAYCAYAAAB0kZQKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNpi7OnpYaAC0AXiF0D8mhzNTAzUASBHnAdim4F0BAhIA/EBIC4aSEeAADMQ9wLxRiDmHyhHwIAfNHqMiXZEcXExGJMCiNCjCMTHgDiTkFmM////p4rXe3t78Rm0DIjTgfgLNkkWoGZQij7MQFsQBY2aICC+Rq80gQ2oA/EZIE4YSEeAACcQzwfimVD2gDgCBtKgiVZlIB0BAgbQbBwykI5A5I4BtPsaNLfcHKiQWADEJiAHDERIfAfiLKgjBiQ67kCD/zK2NAFqjMyi0AJQVnPCI78GiBNxFttQF6ZToVjG5ohfoLoOiKcMVO54BA3+swPVntgKxIbEOIAWjvgLxJVA7APE7waisHoKxBFAfGSgSszL0MLnBTmaAQIMAKg/OsrT7JG8AAAAAElFTkSuQmCC"),
+    -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(0.49, #dddddd), color-stop(0.51, #d1d1d1), color-stop(1, #a1a1a1));
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.iphone-slider span {
+  /* position the text just under the button in the stacking order */
+  position: absolute;
+  z-index: 99;
+  top: 30%;
+  left: 45%;
+
+  font-family: "Helvetica Neue", Helvetica, sans;
+  font-size: 24px;
+  color: white;
+  cursor: default;
+  -webkit-user-select: none;
+
+  /* semitransparent gradient mask to animate over the text */
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, rgba(0, 0, 0, 0.3)),
+    color-stop(0.45, rgba(0, 0, 0, 0.3)),
+    color-stop(0.5, rgba(0, 0, 0, 1)),
+    color-stop(0.55, rgba(0, 0, 0, 0.3)),
+    color-stop(1, rgba(0, 0, 0, 0.3))
+  );
+  -webkit-mask-size: 1000px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation: text-spotlight 4s infinite;
+}
+
+/* animate the webkit-mark over the text */
+@-webkit-keyframes text-spotlight {
+  0% {
+    -webkit-mask-position: -800px;
+  }
+
+  100% {
+    -webkit-mask-position: 0px;
+  }
+}
+
+.custom_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px 5px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+.custom_card2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+hr {
+  height: 0px;
+  border-width: 1px;
+  box-sizing: content-box;
+  color: #ddd;
+  border-color: #ddd;
+}
+.sumry {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+html.ios ion-modal.modal-card ion-header ion-toolbar:first-of-type,
+html.ios ion-modal.modal-sheet ion-header ion-toolbar:first-of-type,
+html.ios ion-modal ion-footer ion-toolbar:first-of-type {
+  padding-top: 0px !important;
+}
+
+ion-accordion {
+  margin: 0 auto;
+}
+
+ion-accordion.accordion-expanding,
+ion-accordion.accordion-expanded {
+  width: calc(100% - 32px);
+
+  margin: 16px auto;
+}
+
+ion-accordion.accordion-collapsing ion-item[slot="header"],
+ion-accordion.accordion-collapsed ion-item[slot="header"] {
+  --background: var(--ion-color-light);
+  --color: var(--ion-color-light-contrast);
+}
+
+ion-accordion.accordion-expanding ion-item[slot="header"],
+ion-accordion.accordion-expanded ion-item[slot="header"] {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}

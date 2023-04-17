@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome, {{userRegistrationModel.FirstName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="background-image" no-scroll padding>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input type="text" [(ngModel)]="userRegistrationModel.FirstName" [ngModelOptions]=" 
+      {standalone: true}" name="firstName" required #firstNameCtrl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input type="text" [(ngModel)]="userRegistrationModel.LastName" [ngModelOptions]=" 
+      {standalone: true}" name="lastName" required #lastNameCtrl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Mobile Number</ion-label>
+              <ion-input type="number" ngModel name="mobileNumber" required #mobieNumberCtrl="ngModel"
+                [(ngModel)]="userRegistrationModel.Mobile" [ngModelOptions]=" 
+      {standalone: true}"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button type="submit" color="primary" expand="block" [disabled]="!f.valid">
+            Sign Up
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <!-- <div class="ion-text-center">
+    <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
+  </div> -->
+</ion-content>

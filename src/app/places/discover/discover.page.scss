@@ -1,0 +1,39 @@
+.avatar {
+  float: right;
+}
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start !important;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 300px;
+  white-space: nowrap;
+  /* width: 50px; */
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  font-size: 14px;
+}
+// --bs-breadcrumb-divider: '';
+.exp_para {
+  font-size: 25px;
+  font-weight: bold;
+  padding-right: 12px;
+  color: white;
+}
