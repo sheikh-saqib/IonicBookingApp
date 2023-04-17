@@ -4,4 +4,4 @@
 
 2. Build and run the API Layer
 
-3. run ng serve 
+3. Run ng serve 
